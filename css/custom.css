@@ -39,28 +39,76 @@ html, body {
 	background: black url("../images/14.jpg") no-repeat center center;
 	background-size: 100%;
 	border-radius: 150% 0 150% 0 / 250%;
+	
 	box-shadow: 0px 0px 100px 1px #888888;
+		transition: all 1s ease;	
 }
+
+
+.buttonA {
+	/*Set div attributes*/
+	position: absolute;
+	padding-top: 3%;
+	padding-left: 3%;
+	background: white;
+	border-radius : 50%;
+	box-shadow: 0 0 10px 5px white;
+
+	/*Set text attributes in div*/
+	overflow: hidden;
+
+	/*transition and animation*/
+	transition: 0.5s ease-in;
+}
+.buttonA:hover {
+	padding-left: 6%;
+	padding-top: 2.95%;
+	box-shadow: 0 0 50px 4px #d04a4a;
+	border-radius: 50% 50% 50% 50% / 10%;
+}
+
+#butOne {top:20%; left: 25%;}
+#butTwo {top:45%; left: 18%;}
+#butThree {top:75%; left: 20%;}
+#butFour {top: 20%; right: 20%;}
+#butFive {top: 50%; right: 18%;}
+#butSix {top: 75%; right: 25%;}
+
+
+.testing {
+	position: absolute;
+	padding-left: 5%;
+	padding-top: 1%;
+	top: 80%;
+	left: 80%;
+	background: white;
+	border-radius: 50% 50% 50% 50% / 10%;
+	box-shadow: 0 0 50px 4px #d04a4a;
+color: #444;
+	/*Set text attributes in div*/
+	
+	
+}
+
+/*.pfImg:hover {
+	box-shadow:  0px 0px 100px 10px #888888, 0px 0px 0px 0.3px #888888;
+}*/
 
 /*Effect when hovering over portfolio*/
 .pfImg:hover {
+	box-shadow: 0px 0px 100px 10px #888888, 0px 0px 0px 0.3px #888888;
 	animation-name: change_glow;
-	animation-duration: 4s;
+	animation-delay: 1s;
+	animation-duration: 3s;
 	animation-iteration-count: infinite;
 }
 @keyframes change_glow {
-	0% {box-shadow: 0px 0px 100px 1px #888888}
-	20% {box-shadow: 0px 0px 0px 1px #888888}
-	50% {box-shadow: 0px 0px 100px 10px #888888, 0px 0px 0px 0.3px #888888;}	
-	70% {box-shadow: 0px 0px 0px 1px #888888	}
-	100% {box-shadow: 0px 0px 100px 1px #888888}
+	0% {box-shadow: 0px 0px 100px 10px #888888, 0px 0px 0px 0.3px #888888; }	
+	/*20% {box-shadow: 0px 0px 100px 1px #888888}*/
+	50% {
+		box-shadow: 0px 0px 8px 1px #888888; }
+	/*70% {box-shadow: 0px 0px 100px 1px #888888}	*/
+	100% {
+		box-shadow: 0px 0px 100px 10px #888888, 0px 0px 0px 0.3px #888888; }
 }
 
-.pfImg:hover:after {
-	animation-name: colorBlue;
-	animation-duration: 10s;
-}
-@keyframes colorBlue {
-	from {box-shadow: 0 0 50px 50px blue};
-	to {box-shadow: 0 0 50px 50px blue};
-}

@@ -16,8 +16,8 @@
 // 	)
 
 // })
-var line1 = $('#line1');
-var div2 = $('#lineDiv');
+var line1 = $('.line1');
+var div2 = $('.lineDiv');
 // var div1 = $('#one-but');
 $('.buttonA').mouseenter(function(e) {
 

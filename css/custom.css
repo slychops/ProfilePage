@@ -15,7 +15,7 @@ html, body {
 /*Sets the font type*/
 	font-family: times, Times New Roman, times-roman, georgia, serif;
  	font-size: 14px;
- 	line-height: 20px;
+ 	line-height: 14px;
  	color: #444;
 }
 
@@ -27,12 +27,17 @@ html, body {
 	z-index: 100;
 }
 
+p {
+	vertical-align: middle;
+	margin: 0 0;
+}
+
 /*Div to hold the main portfolio image*/
 .pfImg {
 	position: absolute;
 	/*width: 20%;*/
 	padding-top:  18%;
-	padding-left: 40%;
+	width: 40%;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -41,7 +46,8 @@ html, body {
 	border-radius: 150% 0 150% 0 / 250%;
 	
 	box-shadow: 0px 0px 100px 1px #888888;
-		transition: all 1s ease;	
+		transition: all 1s;
+			
 }
 
 
@@ -49,22 +55,35 @@ html, body {
 	/*Set div attributes*/
 	position: absolute;
 	padding-top: 3%;
-	padding-left: 3%;
+	/*padding-left: 3%;*/
+	width: 3%;
 	background: white;
 	border-radius : 50%;
 	box-shadow: 0 0 10px 5px white;
 
 	/*Set text attributes in div*/
 	overflow: hidden;
+	color: black;
 
 	/*transition and animation*/
-	transition: 0.5s ease-in;
+	transition: 0.5s;
+	transition-timing-function: cubic-bezier(1,4,1); 
 }
 .buttonA:hover {
 	padding-left: 6%;
 	padding-top: 2.95%;
+	opacity: 0.9;
 	box-shadow: 0 0 50px 4px #d04a4a;
 	border-radius: 50% 50% 50% 50% / 10%;
+}
+
+.glwBnc {
+	animation-name: glow_eff;
+  	animation-duration: 4s;
+  	animation-iteration-count: infinite;
+}
+@keyframes glow_eff {
+	50% {box-shadow: 0px 0px 15px 7px white;}
 }
 
 #butOne {top:20%; left: 25%;}
@@ -73,22 +92,6 @@ html, body {
 #butFour {top: 20%; right: 20%;}
 #butFive {top: 50%; right: 18%;}
 #butSix {top: 75%; right: 25%;}
-
-
-.testing {
-	position: absolute;
-	padding-left: 5%;
-	padding-top: 1%;
-	top: 80%;
-	left: 80%;
-	background: white;
-	border-radius: 50% 50% 50% 50% / 10%;
-	box-shadow: 0 0 50px 4px #d04a4a;
-color: #444;
-	/*Set text attributes in div*/
-	
-	
-}
 
 /*.pfImg:hover {
 	box-shadow:  0px 0px 100px 10px #888888, 0px 0px 0px 0.3px #888888;

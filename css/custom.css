@@ -24,144 +24,43 @@ html, body {
 	width:100%;
 	height: 100%;
 	background-color: black;	
-	z-index: 0;
+	z-index: 100;
 }
 
-/*Main menu is a rounded menu*/
-.mainMenu {
+/*Div to hold the main portfolio image*/
+.pfImg {
 	position: absolute;
-	background-color: #fff;
-	width: 70%;
-	height: 60%;
-	min-height: 300px;
-	min-width: 600px;
+	/*width: 20%;*/
+	padding-top:  18%;
+	padding-left: 40%;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	border-radius: 180px;
-	/*border-radius: 0 50% 50% 50% / 15%;*/
-	z-index : 2;
-}
-
-.profilePic{
-	visibility:	 hidden;
-	position: absolute;
-	width: 58%;
-	height: 90%;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	border-radius: 50% / 40%;
-	z-index: 20;
-	background: url("../images/14.jpg") no-repeat center center;
+	background: black url("../images/14.jpg") no-repeat center center;
 	background-size: 100%;
-	z-index: 5;
+	border-radius: 150% 0 150% 0 / 250%;
+	box-shadow: 0px 0px 100px 1px #888888;
 }
 
-.buttonA {
-	position: absolute;
-	display: block;
-	height:20%;	
-	width:90%;
-	margin: 0 5% 0% 5%;
-	border-radius: 50% 50% 50% 50% / 15%;
-	overflow-x: hidden;
-	background-color: #cdd0d7;
-	box-sizing: border-box;
-	border: 12px solid #737373;
-	overflow: hidden;
-	font-size: calc(8px + 0.7vw);
-	text-align: center;
-	z-index: 5;
+/*Effect when hovering over portfolio*/
+.pfImg:hover {
+	animation-name: change_glow;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
 }
-.buttonA:hover {
-	background-color: #99ff99;
-	cursor: pointer;	
+@keyframes change_glow {
+	0% {box-shadow: 0px 0px 100px 1px #888888}
+	20% {box-shadow: 0px 0px 0px 1px #888888}
+	50% {box-shadow: 0px 0px 100px 10px #888888, 0px 0px 0px 0.3px #888888;}	
+	70% {box-shadow: 0px 0px 0px 1px #888888	}
+	100% {box-shadow: 0px 0px 100px 1px #888888}
 }
 
-.nav-block {
-	position: relative;
-	height: 77%;
-	width: 15%;
-	top:50%;
-	transform: translateY(-50%);
+.pfImg:hover:after {
+	animation-name: colorBlue;
+	animation-duration: 10s;
 }
-#nav-blockA {
-	position: absolute;
-	left: 7%;
-	z-index: 5;
+@keyframes colorBlue {
+	from {box-shadow: 0 0 50px 50px blue};
+	to {box-shadow: 0 0 50px 50px blue};
 }
-#nav-blockB{
-	position: absolute;
-	right: 7%;
-	z-index: 5;
-}
-
-/*Sets the height within div blockA/blockB*/
-#one-but {top: 3%;
-			left:5%;}
-#two-but {	top: 26%;
-			left: -10%;}
-#three-but {top: 52%;
-			left:-10%;}
-#four-but {top: 77%;
-			left:5%;}
-#five-but {top:3%;
-			right:5%;}
-#six-but {top: 26%;
-			right:-10%;}
-#seven-but {top: 52%;
-			right:-10%;}
-#eight-but {top: 77%;
-			right:5%;}
-
-/*Sets text in the menu blocks to be vertically aligned*/
-.vert-align {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-/*Deals with the line and line divs to the profile image*/
-#line1 {
-	stroke-width: 1px;
-  stroke: black;
-}
-
-#lineDiv {
-	height: 77%;
-	top:50%;
-	transform: translateY(-50%);
-	width: 86%;
-	left: 7%;
-	z-index: 2;
-	/*background: blue;*/
-	position: absolute;
-}
-
-
-/*--------------------CONTACT AREA--------------------*/
-
-.contact {
-	margin:0 20%;
-}
-.contactDetails {
-	float: left;
-	display:inline-block;
-	width:100%;
-	margin:5px 0;
-	background-color: #999;
-	
-}
-
-.contactDetails a{
-	color : red;
-}
-
-.contactDetails a:hover{
-	color: green;
-}
-
-

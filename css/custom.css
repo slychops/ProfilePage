@@ -21,10 +21,18 @@ html, body {
 
 /*---------------MENU AREA AND FRONT COVER---------------*/
 .mainPage {
+	position: absolute;
 	width:100%;
 	height: 100%;
 	background-color: black;	
-	z-index: 100;
+}
+.photoPage {
+	
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	display: none;
 }
 
 /*Div to hold the main portfolio image*/
@@ -41,8 +49,7 @@ html, body {
 	border-radius: 150% 0 150% 0 / 250%;
 	
 	box-shadow: 0px 0px 100px 1px #888888;
-		transition: all 1s;
-			
+		transition: all 1s;	
 }
 
 
@@ -68,7 +75,8 @@ html, body {
 .buttonA:hover {
 	padding-left: 6%;
 	padding-top: 2.95%;
-	
+	cursor: pointer;
+
 	opacity: 0.9;
 	box-shadow: 0 0 50px 4px #d04a4a;
 	border-radius: 50% 50% 50% 50% / 10%;
@@ -121,6 +129,92 @@ span {
 		box-shadow: 0px 0px 100px 10px #888888, 0px 0px 0px 0.3px #888888; }
 }
 
-.line1 {
+/*#line1 {
+	stroke-width: 1px;
+  stroke: white;
+}
+#lineDiv {
+	height: 77%;
+	top:50%;
+	transform: translateY(-50%);
+	width: 86%;
+	left: 7%;
+	z-index: 0;
 	
+	position: absolute;
+}*/
+
+.photoPalette {
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	height: 80%;
+	width: 80%;
+	background-color: white;
+}
+
+
+.onePhoto:hover {
+	cursor: pointer;
+}
+.onePhoto {
+	margin-left: 2.5%;
+	margin-top: 2%;
+	width: 21.7%;
+	height: 27.5%;
+	background: green;
+	display: inline-block;
+	border: 1px dotted #333333;
+}
+#pic1 {
+	background: no-repeat center/100% url("../images/thumbnail/1tn.jpg");
+}
+#pic2 {
+	background: no-repeat center/100%  url("../images/thumbnail/2tn.jpg");
+}
+#pic3 {
+	background: no-repeat center/100% url("../images/thumbnail/3tn.jpg");
+}
+#pic4 {
+	background: no-repeat center/100% url("../images/thumbnail/4tn.jpg");
+}
+#pic5 {
+	background: no-repeat center/100% url("../images/thumbnail/5tn.jpg");
+}
+#pic6 {
+	background: no-repeat center/100% url("../images/thumbnail/6tn.jpg");
+}
+#pic7 {
+	background: no-repeat center/100% url("../images/thumbnail/7tn.jpg");
+}
+#pic8{
+	background: no-repeat center/100% url("../images/thumbnail/8tn.jpg");
+}
+#pic9 {
+	background: no-repeat center/100% url("../images/thumbnail/9tn.jpg");
+}
+#pic10 {
+	background: no-repeat center/100% url("../images/thumbnail/10tn.jpg");
+}
+#pic11{
+	background: no-repeat center/100% url("../images/thumbnail/11tn.jpg");
+}
+#pic12{
+	background: no-repeat center/100% url("../images/thumbnail/12	tn.jpg");
+}
+
+.mainPhoto {
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	height: 80%;
+	width: 80%;
+	background-color: white;
+	z-index: 300;
+	display: none;
+}
+
+img {
+	max-height: 100%;
+	max-width: 100%;
 }

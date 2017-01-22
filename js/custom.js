@@ -18,15 +18,19 @@
 // })
 var line1 = $('#line1');
 var div2 = $('#lineDiv');
+var div3 = $('#four-but');
+var div4 = $('#eight-but');
 // var div1 = $('#one-but');
 $('.buttonA').mouseenter(function(e) {
 
+
 var div1 = $(e.target);
-var pos1 = div1.position();
-var pos2 = div2.position();
-console.log(div1);
-console.log(pos1);
+if (div1[0].className == 'buttonA') {
+	var pos1 = div1.position();
+	var pos2 = div2.position();
+	console.log(div1);
+	console.log(pos1);
 
-line1.attr('x1',pos1.left + div1.width()/2).attr('y1',pos1.top + div1.height()/2).attr('x2',div2.width()/2).attr('y2',div2.height()/2);
-
+	line1.attr('x1',pos1.left + div1.width()/2).attr('y1',pos1.top + div1.height()/2).attr('x2',div2.width()/2).attr('y2',div2.height()/2);
+	} 
 })
